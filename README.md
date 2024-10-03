@@ -3,7 +3,7 @@
 ### Initialize git repository
 
     git init
-    git remote add origin https://github.com/JhonnyCyber150/BioEWeek_5.git
+    git remote add origin https://github.com/alboeis/Week4-5.git
     git branch -m master main
 
 ## Problem 1
@@ -92,7 +92,7 @@ This file is into a new directory called prokka_output
 
 Shell commands 
 ```bash
-grep -h "gene=" /home/caichoj/BioEWeek_5/prokka_output/*/*.gff | sed 's/.*gene=//; s/;.*//' | sort -u > unique_gene_names.txt
+grep -h "gene=" /home/alboeis/WEEK45/prokka_output/*/*.gff | sed 's/.*gene=//; s/;.*//' | sort -u > unique_gene_names.txt
 head -n 5 unique_gene_names.txt
 ```
 **OUTPUT:**  

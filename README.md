@@ -1,4 +1,10 @@
-# Week4-5
+# BioEWeek_5
+
+### Initialize git repository
+
+    git init
+    git remote add origin https://github.com/JhonnyCyber150/BioEWeek_5.git
+    git branch -m master main
 
 ## Problem 1
 ### Amino Acid Sequence Count
@@ -34,13 +40,13 @@ grep ">" ecoli_genes.fna -c > gene_count.txt
 
 **OUTPUT: 4161**
 
-
+Value in the **gene_count.txt**
 
 --- 
 ## Problem 3
 ### Run prodigal on all of the genomes creating a .sh script and find which genome has the highest number of genes
 
-
+Create a **.sh** file and code 
 
 ```bash
 touch Prodigal_Problem3.sh
@@ -53,7 +59,7 @@ sbatch Prodigal_Problem3.sh
 ```
 **OUTPUT: prodigal_results.txt**
 
-
+A file that contains the genome with the highest number of genes
 
 --- 
 ## Problem 4
@@ -79,17 +85,16 @@ sbatch prokka_Problem4.sh
 
 **OUTPUT: cds_counts.txt**
 
-
+This file is into a new directory called prokka_output
 
 ## Problem 5
 ### Extract and list all unique gene names annotated by Prokka using shell commands
 
 Shell commands 
 ```bash
-grep -h "gene=" /home/alboeis/WEEK45/prokka_output/*/*.gff | sed 's/.*gene=//; s/;.*//' | sort -u > unique_gene_names.txt
+grep -h "gene=" /home/caichoj/BioEWeek_5/prokka_output/*/*.gff | sed 's/.*gene=//; s/;.*//' | sort -u > unique_gene_names.txt
 head -n 5 unique_gene_names.txt
 ```
-
 **OUTPUT:**  
 First five gene names from the list **unique_gene_names.txt**
 
